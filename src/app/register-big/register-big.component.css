@@ -1,0 +1,26 @@
+.formName{
+  position: absolute;
+  top: 18%;
+  right: 46%;
+}
+.formSurname{
+  position: absolute;
+  top: 28%;
+  right: 46%;
+}
+.formAge{
+  position: absolute;
+  top: 38%;
+  right: 46%;
+}
+button{
+  position: absolute;
+  top: 17%;
+  right: 60%;
+}
+h1{
+  text-align: center;
+}
+h2{
+  text-align: center;
+}

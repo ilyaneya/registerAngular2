@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Страница Регистрации</h1>
+  <div class="register-small-container">
+    <div class="form-container">
+      <h2>Введите свои данные</h2>
+      <form [formGroup]="form">
+        <input formControlName="id">
+        <input formControlName="userId">
+        <input formControlName="title" >
+        <button (click)="registerUser()">Зарегистрироваться</button>
+      </form>
+    </div>
+    <app-register-small *ngFor="let user of registerService.users" [user]="user" (emitDelete)="deleteUserById($event)"></app-register-small>
+  </div>
+</div>
