@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {IUser} from '../register-big/register-big.component';
-import {publish} from 'rxjs/operators';
+  import {publish} from 'rxjs/operators';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 @Injectable()

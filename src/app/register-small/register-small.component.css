@@ -1,5 +1,8 @@
 .container{
-  border: 1px solid crimson;
-  margin-top: auto;
+  border: 2px solid black;
+  margin-top: 2px;
+  font-size: x-large;
 }
-
+button{
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(honeydew), to(mediumaquamarine))
+}

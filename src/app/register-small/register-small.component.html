@@ -1,7 +1,8 @@
 <div class="container">
-<p>{{user.userId}}</p>
-<p>{{user.id}}</p>
-<p>{{user.title}}</p>
+<p>Номер пользователя: {{user.userId}}</p>
+<p>Номер поста: {{user.id}}</p>
+<p>Заголовок: {{user.title}}</p>
+  <p>Пост: {{user.body}}</p>
 <button (click)="onDeleteUser()">Удалить Пользователя</button>
   <button (click)="navigateToUser(user.id)">Перейти на страницу пользователя</button>
 </div>

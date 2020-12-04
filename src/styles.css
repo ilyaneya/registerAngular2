@@ -1,3 +1,10 @@
 body{
-  background-color: antiquewhite;
+  background: linear-gradient(to top left, white, aquamarine);
+  font-style: italic;
+}
+h1{
+  text-decoration: underline;
+}
+p{
+  font-size: large;
 }

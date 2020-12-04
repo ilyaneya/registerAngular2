@@ -23,7 +23,8 @@ export class RegisterBigComponent implements OnInit {
     this.form = new FormGroup({
       userId: new FormControl(''),
       id: new FormControl(''),
-      title: new FormControl('')
+      title: new FormControl(''),
+      body: new FormControl('')
     });
   }
   registerUser(): void {

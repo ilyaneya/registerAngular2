@@ -28,7 +28,7 @@ this.emitDelete.emit(this.user.id);
   }
 
   navigateToUser(id: number): void {
-this.router.navigate([`users/${id}`]);
+this.router.navigate([`id/${id}`]);
   }
 }
 
