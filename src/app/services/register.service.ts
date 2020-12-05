@@ -1,11 +1,10 @@
 import {Injectable} from '@angular/core';
 import {IUser} from '../register-big/register-big.component';
-  import {publish} from 'rxjs/operators';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
+
 @Injectable()
-// tslint:disable-next-line:class-name
-export class registerService {
+export class RegisterService {
   public users: IUser[];
   constructor(private httpClient: HttpClient) {}
 public addUser(user: IUser): void {

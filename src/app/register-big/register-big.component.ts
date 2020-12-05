@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
-import {registerService} from '../services/register.service';
+import {RegisterService} from '../services/register.service';
 export interface IUser {
   userId: number;
   id: number;
@@ -18,8 +18,7 @@ export class RegisterBigComponent implements OnInit {
 
   public form: FormGroup;
 
-  // tslint:disable-next-line:no-shadowed-variable
-  constructor(public registerService: registerService) {
+  constructor(public registerService: RegisterService) {
     this.form = new FormGroup({
       userId: new FormControl(''),
       id: new FormControl(''),

@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { RegisterBigComponent } from './register-big/register-big.component';
 import { RegisterSmallComponent } from './register-small/register-small.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {registerService} from './services/register.service';
+import {RegisterService} from './services/register.service';
 import {HttpClientModule} from '@angular/common/http';
 import {RouterModule, Routes} from '@angular/router';
 import { UserComponent } from './user/user.component';
@@ -31,7 +31,7 @@ const routes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [registerService],
+  providers: [RegisterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
