@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnDestroy, OnInit, Output} from '@angular/core';
-import {IUser} from '../register-big/register-big.component';
 import {Route, Router} from '@angular/router';
+import {IPost} from "../interfaces/post.interface";
 
 @Component({
   selector: 'app-register-small',
@@ -9,26 +9,20 @@ import {Route, Router} from '@angular/router';
 })
 export class RegisterSmallComponent implements OnInit, OnDestroy {
   @Input()
-  user: IUser;
+  post: IPost;
 
-  @Output()
-  emitDelete: EventEmitter <number> = new EventEmitter<number>();
   constructor(private router: Router) { }
 
   ngOnInit(): void {
     console.log('init');
   }
 
-  onDeleteUser(): void {
-this.emitDelete.emit(this.user.id);
-  }
-
   ngOnDestroy(): void {
     console.log('destroy');
   }
 
-  navigateToUser(id: number, userId: number): void {
-this.router.navigate([`${userId}/${id}`]);
+  navigateToPost(id: number): void {
+this.router.navigate([`${id}`]);
   }
 }
 

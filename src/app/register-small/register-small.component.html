@@ -1,9 +1,7 @@
 <div class="container">
-<p>Номер пользователя: {{user.userId}}</p>
-<p>Номер поста: {{user.id}}</p>
-<p>Заголовок: {{user.title}}</p>
-  <p>Пост: {{user.body}}</p>
-<button (click)="onDeleteUser()">Удалить Пользователя</button>
-  <button (click)="navigateToUser(user.id, user.userId)">Перейти на страницу пользователя</button>
+<p>Номер пользователя: {{post.userId}}</p>
+<p>Номер поста: {{post.id}}</p>
+<p>Заголовок: {{post.title}}</p>
+  <p>Пост: {{post.body}}</p>
+  <button (click)="navigateToPost(post.id)">Перейти на страницу поста</button>
 </div>
-x

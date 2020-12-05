@@ -5,13 +5,14 @@ import { AppComponent } from './app.component';
 import { RegisterBigComponent } from './register-big/register-big.component';
 import { RegisterSmallComponent } from './register-small/register-small.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {RegisterService} from './services/register.service';
+import {UserService} from './services/user.service';
 import {HttpClientModule} from '@angular/common/http';
 import {RouterModule, Routes} from '@angular/router';
 import { UserComponent } from './user/user.component';
+import {PostService} from "./services/post.service";
 
 const routes: Routes = [
-  {path: ':users/:id', component: UserComponent},
+  {path: ':postID', component: UserComponent},
   {path: '', component: RegisterBigComponent},
   {path: '**', redirectTo: ''},
 ];
@@ -31,7 +32,7 @@ const routes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [RegisterService],
+  providers: [UserService, PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
