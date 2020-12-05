@@ -3,6 +3,6 @@
   <div class="register-small-container">
     <div class="form-container">
     </div>
-    <app-register-small *ngFor="let user of registerService.users" [user]="user" (emitDelete)="deleteUserById($event)"></app-register-small>
+    <app-register-small *ngFor="let post of postService.posts" [post]="post"></app-register-small>
   </div>
 </div>

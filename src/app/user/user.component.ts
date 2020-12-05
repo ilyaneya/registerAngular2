@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {RegisterService} from '../services/register.service';
+import {UserService} from '../services/user.service';
 import {ActivatedRoute, Router} from '@angular/router';
-import {IUser} from '../register-big/register-big.component';
+import {IUser} from '../interfaces/user.interface';
+import {PostService} from "../services/post.service";
+import {IPost} from "../interfaces/post.interface";
+
 
 @Component({
   selector: 'app-user',
@@ -10,16 +13,20 @@ import {IUser} from '../register-big/register-big.component';
 })
 export class UserComponent implements OnInit {
 public user: IUser;
+  private post: IPost;
 
-  constructor(private registerService: RegisterService, private adtivatedRoute: ActivatedRoute) { }
+  constructor(private userService: UserService, private adtivatedRoute: ActivatedRoute, private postService: PostService) { }
 
   ngOnInit(): void {
     console.log(this.adtivatedRoute.snapshot.params);
-    const id = this.adtivatedRoute.snapshot.params.id;
-    const postId = this.adtivatedRoute.snapshot.params.postId;
-    this.registerService.getSingleUser(id).subscribe((user) => {
-    this.user = user;
-    console.log(this.user);
+    const postId = this.adtivatedRoute.snapshot.params.postID;
+    this.postService.getSinglePost(postId).subscribe((post) => {
+      this.post = post;
+      console.log(this.post);
+      this.userService.getSingleUser(this.post.userId).subscribe((user) => {
+        this.user = user;
+        console.log(this.user);
+      });
     });
   }
 }
