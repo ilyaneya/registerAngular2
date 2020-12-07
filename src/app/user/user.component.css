@@ -1,3 +1,13 @@
-p{
-  font-size: x-large;
+.container{
+  display: flex;
+
+}
+.containerUser{
+  display: flex;
+  flex-direction: column;
+}
+.containerPost{
+  display: flex;
+  flex-direction: column;
+  padding-left: 150px
 }

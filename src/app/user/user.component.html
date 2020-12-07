@@ -1,1 +1,26 @@
-<p>user works!</p>
+<div class="container">
+<div1 class="containerUser">
+  <p1>Информация о пользователе</p1>
+  <p>Имя пользователя: {{user.name}}</p>
+  <p>Ник пользователя: {{user.username}}</p>
+  <p>Электронная почта пользователя: {{user.email}}</p>
+  <p>Вебсайт: {{user.website}}</p>
+  <p2>Адрес:</p2>
+  <p>Город: {{user.address.city}}</p>
+  <p>Улица: {{user.address.street}}</p>
+  <p>Квартира: {{user.address.suite}}</p>
+  <p>Индекс: {{user.address.zipcode}}</p>
+  <p>Телефон: {{user.phone}}</p>
+  <p2>Компания:</p2>
+  <p>Название компании {{user.company.name}}</p>
+  <p>СatchPhrase: {{user.company.catchPhrase}}</p>
+  <p>Bs: {{user.company.bs}}</p>
+</div1>
+<div2 class="containerPost">
+  <p1>Информация о посте:</p1>
+  <p>ID поста: {{post.id}}</p>
+  <p>ID Пользователя: {{post.userId}}</p>
+  <p>Заголовок поста: {{post.title}}</p>
+  <p>Текс поста: {{post.body}}</p>
+</div2>
+</div>

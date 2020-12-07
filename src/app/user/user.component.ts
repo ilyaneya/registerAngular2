@@ -18,7 +18,6 @@ public user: IUser;
   constructor(private userService: UserService, private adtivatedRoute: ActivatedRoute, private postService: PostService) { }
 
   ngOnInit(): void {
-    console.log(this.adtivatedRoute.snapshot.params);
     const postId = this.adtivatedRoute.snapshot.params.postID;
     this.postService.getSinglePost(postId).subscribe((post) => {
       this.post = post;

@@ -9,7 +9,6 @@ export class UserService {
   constructor(private httpClient: HttpClient) {}
 
     public getSingleUser(id: number): Observable<IUser>{
-      console.log(id);
       return this.httpClient.get<IUser>(`https://jsonplaceholder.typicode.com/users/${id}`);
     }
 }
