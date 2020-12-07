@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {UserService} from '../services/user.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {IUser} from '../interfaces/user.interface';
-import {PostService} from "../services/post.service";
-import {IPost} from "../interfaces/post.interface";
+import {PostService} from '../services/post.service';
+import {IPost} from '../interfaces/post.interface';
 
 
 @Component({

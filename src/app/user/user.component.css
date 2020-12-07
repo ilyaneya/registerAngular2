@@ -11,3 +11,15 @@
   flex-direction: column;
   padding-left: 150px
 }
+p{
+  font-size: medium;
+  margin-top: 1px;
+}
+p1{
+  font-size: x-large;
+  text-decoration:underline;
+}
+p2{
+  font-size: large;
+  text-decoration:underline;
+}
