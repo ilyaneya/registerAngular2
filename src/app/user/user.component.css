@@ -12,14 +12,14 @@
   padding-left: 150px
 }
 p{
-  font-size: medium;
+  font-size: large;
   margin-top: 1px;
 }
-p1{
+h1{
   font-size: x-large;
   text-decoration:underline;
 }
-p2{
+h2{
   font-size: large;
   text-decoration:underline;
 }

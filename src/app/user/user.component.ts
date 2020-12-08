@@ -13,7 +13,7 @@ import {IPost} from '../interfaces/post.interface';
 })
 export class UserComponent implements OnInit {
 public user: IUser;
-  private post: IPost;
+  public post: IPost;
 
   constructor(private userService: UserService, private adtivatedRoute: ActivatedRoute, private postService: PostService) { }
 
