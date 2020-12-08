@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {UserService} from '../services/user.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {IUser} from '../interfaces/user.interface';
-import {PostService} from "../services/post.service";
-import {IPost} from "../interfaces/post.interface";
+import {PostService} from '../services/post.service';
+import {IPost} from '../interfaces/post.interface';
 
 
 @Component({
@@ -13,12 +13,11 @@ import {IPost} from "../interfaces/post.interface";
 })
 export class UserComponent implements OnInit {
 public user: IUser;
-  private post: IPost;
+  public post: IPost;
 
   constructor(private userService: UserService, private adtivatedRoute: ActivatedRoute, private postService: PostService) { }
 
   ngOnInit(): void {
-    console.log(this.adtivatedRoute.snapshot.params);
     const postId = this.adtivatedRoute.snapshot.params.postID;
     this.postService.getSinglePost(postId).subscribe((post) => {
       this.post = post;
